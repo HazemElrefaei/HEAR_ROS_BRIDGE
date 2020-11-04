@@ -7,7 +7,7 @@ ROSUnit_BroadcastData::ROSUnit_BroadcastData(ros::NodeHandle& t_main_handler) : 
     _cs_prov_pub = t_main_handler.advertise<std_msgs::Float64MultiArray>("control_system_output", 2);
     _csr_prov_pub = t_main_handler.advertise<std_msgs::Float64MultiArray>("control_system_reference", 2);
     _act_prov_pub = t_main_handler.advertise<std_msgs::Float64MultiArray>("actuation_output", 2);
-    _info_prov_pub = t_main_handler.advertise<hear_ros_bridge::Info>("info", 2);
+    _info_prov_pub = t_main_handler.advertise<hear_msgs::Info>("info", 2);
     _error_prov_pub = t_main_handler.advertise<geometry_msgs::PointStamped>("error", 2);
 
     _att.x = 0;
@@ -103,7 +103,7 @@ void ROSUnit_BroadcastData::process(DataMsg* t_msg, Port* t_port) {
     } else if(t_port->getID() == ports_id::IP_15_ARMED){
         BoolMsg* armed_msg = (BoolMsg*)t_msg;
         _armed = armed_msg->data;
-        hear_ros_bridge::Info msg;
+        hear_msgs::Info msg;
         msg.header.seq = ++_seq_info;
         msg.header.stamp = ros::Time::now();
         msg.header.frame_id = "";

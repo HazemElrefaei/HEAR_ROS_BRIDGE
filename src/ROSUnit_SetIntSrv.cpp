@@ -3,7 +3,7 @@
 ROSUnit_SetIntSrv* ROSUnit_SetIntSrv::m_ptr[ROSUnit_capacity];
 int ROSUnit_SetIntSrv::internal_counter=0;
 
-bool(*ROSUnit_SetIntSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&){
+bool(*ROSUnit_SetIntSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&){
   ROSUnit_SetIntSrv::srv_callback1,
   ROSUnit_SetIntSrv::srv_callback2,
   ROSUnit_SetIntSrv::srv_callback3,
@@ -50,105 +50,105 @@ ROSUnit_SetIntSrv::~ROSUnit_SetIntSrv() {
 
 }
 
-bool ROSUnit_SetIntSrv::srv_callback1(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback1(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_0->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback2(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback2(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_1->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback3(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback3(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_2->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback4(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback4(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_3->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback5(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback5(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_4->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback6(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback6(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_5->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback7(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback7(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_6->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback8(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback8(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_7->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback9(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback9(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_8->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback10(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback10(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_9->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback11(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback11(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_10->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback12(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback12(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_11->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback13(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback13(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_12->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback14(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback14(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_13->receiveMsgData(&t_msg);
     return true;
 }
 
-bool ROSUnit_SetIntSrv::srv_callback15(hear_ros_bridge::set_int::Request& req, hear_ros_bridge::set_int::Response& res) {
+bool ROSUnit_SetIntSrv::srv_callback15(hear_msgs::set_int::Request& req, hear_msgs::set_int::Response& res) {
     IntegerMsg t_msg;
     t_msg.data = req.data;
     _output_port_14->receiveMsgData(&t_msg);

@@ -3,7 +3,7 @@
 ROSUnit_SetFloatSrv* ROSUnit_SetFloatSrv::m_ptr[ROSUnit_capacity];
 int ROSUnit_SetFloatSrv::internal_counter=0;
 
-bool(*ROSUnit_SetFloatSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_ros_bridge::set_float::Request&, hear_ros_bridge::set_float::Response&){
+bool(*ROSUnit_SetFloatSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_msgs::set_float::Request&, hear_msgs::set_float::Response&){
   ROSUnit_SetFloatSrv::srv_callback1,
   ROSUnit_SetFloatSrv::srv_callback2,
   ROSUnit_SetFloatSrv::srv_callback3,
@@ -29,31 +29,31 @@ ROSUnit_SetFloatSrv::~ROSUnit_SetFloatSrv() {
 
 }
 
-bool ROSUnit_SetFloatSrv::srv_callback1(hear_ros_bridge::set_float::Request& req, hear_ros_bridge::set_float::Response& res) {
+bool ROSUnit_SetFloatSrv::srv_callback1(hear_msgs::set_float::Request& req, hear_msgs::set_float::Response& res) {
     FloatMsg t_msg;
     t_msg.data = req.data;
     _output_port_0->receiveMsgData(&t_msg);
     return true;
 }
-bool ROSUnit_SetFloatSrv::srv_callback2(hear_ros_bridge::set_float::Request& req, hear_ros_bridge::set_float::Response& res) {
+bool ROSUnit_SetFloatSrv::srv_callback2(hear_msgs::set_float::Request& req, hear_msgs::set_float::Response& res) {
     FloatMsg t_msg;
     t_msg.data = req.data;
     _output_port_1->receiveMsgData(&t_msg);
     return true;
 }
-bool ROSUnit_SetFloatSrv::srv_callback3(hear_ros_bridge::set_float::Request& req, hear_ros_bridge::set_float::Response& res) {
+bool ROSUnit_SetFloatSrv::srv_callback3(hear_msgs::set_float::Request& req, hear_msgs::set_float::Response& res) {
     FloatMsg t_msg;
     t_msg.data = req.data;
     _output_port_2->receiveMsgData(&t_msg);
     return true;
 }
-bool ROSUnit_SetFloatSrv::srv_callback4(hear_ros_bridge::set_float::Request& req, hear_ros_bridge::set_float::Response& res) {
+bool ROSUnit_SetFloatSrv::srv_callback4(hear_msgs::set_float::Request& req, hear_msgs::set_float::Response& res) {
     FloatMsg t_msg;
     t_msg.data = req.data;
     _output_port_3->receiveMsgData(&t_msg);
     return true;
 }
-bool ROSUnit_SetFloatSrv::srv_callback5(hear_ros_bridge::set_float::Request& req, hear_ros_bridge::set_float::Response& res) {
+bool ROSUnit_SetFloatSrv::srv_callback5(hear_msgs::set_float::Request& req, hear_msgs::set_float::Response& res) {
     FloatMsg t_msg;
     t_msg.data = req.data;
     _output_port_4->receiveMsgData(&t_msg);

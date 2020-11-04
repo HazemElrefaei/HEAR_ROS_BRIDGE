@@ -15,7 +15,7 @@ ROSUnit_InfoSubscriber::~ROSUnit_InfoSubscriber() {
 
 }
 
-void ROSUnit_InfoSubscriber::callbackInfo(const hear_ros_bridge::Info& msg){
+void ROSUnit_InfoSubscriber::callbackInfo(const hear_msgs::Info& msg){
     info_msg.armed = msg.armed;
     _output_port_0->receiveMsgData((DataMsg*) &info_msg); 
 }

@@ -1,12 +1,12 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/PID_param.h>
-#include <hear_ros_bridge/MRFT_param.h>
-#include <hear_ros_bridge/BB_param.h>
-#include <hear_ros_bridge/Update_Controller_PID.h>
-#include <hear_ros_bridge/Update_Controller_MRFT.h>
-#include <hear_ros_bridge/Update_Controller_BB.h>
+#include <hear_msgs/PID_param.h>
+#include <hear_msgs/MRFT_param.h>
+#include <hear_msgs/BB_param.h>
+#include <hear_msgs/Update_Controller_PID.h>
+#include <hear_msgs/Update_Controller_MRFT.h>
+#include <hear_msgs/Update_Controller_BB.h>
 #include "HEAR_msg/ControllerMsg.hpp"
 
 class ROSUnit_UpdateController :  public ROSUnit{
@@ -18,12 +18,12 @@ private:
     ros::ServiceServer _srv_update_controller_mrft;
     ros::ServiceServer _srv_update_controller_sm;
 
-    static bool callbackUpdateControllerPID(hear_ros_bridge::Update_Controller_PID::Request  &req, 
-                                            hear_ros_bridge::Update_Controller_PID::Response &res);
-    static bool callbackUpdateControllerMRFT(hear_ros_bridge::Update_Controller_MRFT::Request  &req, 
-                                            hear_ros_bridge::Update_Controller_MRFT::Response &res);
-    static bool callbackUpdateControllerSM(hear_ros_bridge::Update_Controller_BB::Request  &req, 
-                                            hear_ros_bridge::Update_Controller_BB::Response &res);
+    static bool callbackUpdateControllerPID(hear_msgs::Update_Controller_PID::Request  &req, 
+                                            hear_msgs::Update_Controller_PID::Response &res);
+    static bool callbackUpdateControllerMRFT(hear_msgs::Update_Controller_MRFT::Request  &req, 
+                                            hear_msgs::Update_Controller_MRFT::Response &res);
+    static bool callbackUpdateControllerSM(hear_msgs::Update_Controller_BB::Request  &req, 
+                                            hear_msgs::Update_Controller_BB::Response &res);
     static Port* _output_port_0;
     static Port* _output_port_1;
     static Port* _output_port_2;

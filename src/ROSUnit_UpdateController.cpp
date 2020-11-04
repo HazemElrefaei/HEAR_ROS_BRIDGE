@@ -19,8 +19,8 @@ ROSUnit_UpdateController::~ROSUnit_UpdateController() {
 
 }
 
-bool ROSUnit_UpdateController::callbackUpdateControllerPID(hear_ros_bridge::Update_Controller_PID::Request &req, 
-                                                           hear_ros_bridge::Update_Controller_PID::Response &res){
+bool ROSUnit_UpdateController::callbackUpdateControllerPID(hear_msgs::Update_Controller_PID::Request &req, 
+                                                           hear_msgs::Update_Controller_PID::Response &res){
 
     block_id _id = static_cast<block_id>((int)req.controller_parameters.id);
     PID_parameters pid_data;
@@ -37,8 +37,8 @@ bool ROSUnit_UpdateController::callbackUpdateControllerPID(hear_ros_bridge::Upda
     return true;
 }
 
-bool ROSUnit_UpdateController::callbackUpdateControllerMRFT(hear_ros_bridge::Update_Controller_MRFT::Request &req, 
-                                                                    hear_ros_bridge::Update_Controller_MRFT::Response &res){
+bool ROSUnit_UpdateController::callbackUpdateControllerMRFT(hear_msgs::Update_Controller_MRFT::Request &req, 
+                                                                    hear_msgs::Update_Controller_MRFT::Response &res){
     
     block_id _id = static_cast<block_id>((int)req.controller_parameters.id);
     MRFT_parameters mrft_data;
@@ -51,8 +51,8 @@ bool ROSUnit_UpdateController::callbackUpdateControllerMRFT(hear_ros_bridge::Upd
     return true;
 }
 
-bool ROSUnit_UpdateController::callbackUpdateControllerSM(hear_ros_bridge::Update_Controller_BB::Request &req, 
-                                                                hear_ros_bridge::Update_Controller_BB::Response &res){
+bool ROSUnit_UpdateController::callbackUpdateControllerSM(hear_msgs::Update_Controller_BB::Request &req, 
+                                                                hear_msgs::Update_Controller_BB::Response &res){
     
     block_id _id = static_cast<block_id>((int)req.controller_parameters.id);
     BB_parameters bb_param;

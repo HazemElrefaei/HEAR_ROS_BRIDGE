@@ -1,7 +1,7 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/Point2D.h>
+#include <hear_msgs/Point2D.h>
 #include "HEAR_msg/Vector2DMsg.hpp"
 
 class ROSUnit_Point2DSub : public ROSUnit {
@@ -19,10 +19,10 @@ class ROSUnit_Point2DSub : public ROSUnit {
         ros::Subscriber m_sub;
         static int internal_counter;
         static ROSUnit_Point2DSub* m_ptr[ROSUnit_capacity];
-        static void(*callbackFunctionPointer[ROSUnit_capacity])(const hear_ros_bridge::Point2D::ConstPtr&);
-        static void callback1(const hear_ros_bridge::Point2D::ConstPtr&);//TODO refactor through templates
-        static void callback2(const hear_ros_bridge::Point2D::ConstPtr&);
-        static void callback3(const hear_ros_bridge::Point2D::ConstPtr&);
-        static void callback4(const hear_ros_bridge::Point2D::ConstPtr&);
-        static void callback5(const hear_ros_bridge::Point2D::ConstPtr&);
+        static void(*callbackFunctionPointer[ROSUnit_capacity])(const hear_msgs::Point2D::ConstPtr&);
+        static void callback1(const hear_msgs::Point2D::ConstPtr&);//TODO refactor through templates
+        static void callback2(const hear_msgs::Point2D::ConstPtr&);
+        static void callback3(const hear_msgs::Point2D::ConstPtr&);
+        static void callback4(const hear_msgs::Point2D::ConstPtr&);
+        static void callback5(const hear_msgs::Point2D::ConstPtr&);
 };

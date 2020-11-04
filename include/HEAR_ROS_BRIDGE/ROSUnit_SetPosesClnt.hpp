@@ -1,8 +1,8 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/Pose.h>
-#include <hear_ros_bridge/set_poses.h>
+#include <hear_msgs/Pose.h>
+#include <hear_msgs/set_poses.h>
 #include "HEAR_msg/PosesMsg.hpp"
 
 class ROSUnit_SetPosesClnt : public ROSUnit {

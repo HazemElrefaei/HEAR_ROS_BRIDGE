@@ -1,7 +1,7 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/set_int.h>
+#include <hear_msgs/set_int.h>
 #include "HEAR_msg/IntegerMsg.hpp"
 
 class ROSUnit_SetIntClnt : public ROSUnit{

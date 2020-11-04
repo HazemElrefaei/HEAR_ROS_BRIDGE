@@ -1,7 +1,7 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/set_int.h>
+#include <hear_msgs/set_int.h>
 #include "HEAR_msg/IntegerMsg.hpp"
 
 class ROSUnit_SetIntSrv : public ROSUnit {
@@ -31,21 +31,21 @@ private:
     ros::ServiceServer m_server;
     static int internal_counter;
     static ROSUnit_SetIntSrv* m_ptr[ROSUnit_capacity];
-    static bool(*callbackFunctionPointer[ROSUnit_capacity])(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback1(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);//TODO refactor through templates
-    static bool srv_callback2(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback3(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback4(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback5(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback6(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback7(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback8(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback9(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback10(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback11(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback12(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback13(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback14(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
-    static bool srv_callback15(hear_ros_bridge::set_int::Request&, hear_ros_bridge::set_int::Response&);
+    static bool(*callbackFunctionPointer[ROSUnit_capacity])(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback1(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);//TODO refactor through templates
+    static bool srv_callback2(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback3(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback4(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback5(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback6(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback7(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback8(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback9(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback10(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback11(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback12(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback13(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback14(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
+    static bool srv_callback15(hear_msgs::set_int::Request&, hear_msgs::set_int::Response&);
 
 };

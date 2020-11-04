@@ -1,7 +1,7 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/set_bool.h>
+#include <hear_msgs/set_bool.h>
 #include "HEAR_msg/BoolMsg.hpp"
 
 class ROSUnit_SetBoolClnt : public ROSUnit {

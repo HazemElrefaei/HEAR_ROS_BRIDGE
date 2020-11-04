@@ -1,6 +1,6 @@
 #pragma once
 
-#include <hear_ros_bridge/Point2D.h>
+#include <hear_msgs/Point2D.h>
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
 #include "HEAR_msg/Vector2DMsg.hpp"
 

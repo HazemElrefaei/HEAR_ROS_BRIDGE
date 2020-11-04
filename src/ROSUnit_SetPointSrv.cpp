@@ -3,7 +3,7 @@
 ROSUnit_SetPointSrv* ROSUnit_SetPointSrv::m_ptr[ROSUnit_capacity];
 int ROSUnit_SetPointSrv::internal_counter=0;
 
-bool(*ROSUnit_SetPointSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_ros_bridge::set_point::Request&, hear_ros_bridge::set_point::Response&){
+bool(*ROSUnit_SetPointSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_msgs::set_point::Request&, hear_msgs::set_point::Response&){
   ROSUnit_SetPointSrv::srv_callback1,
   ROSUnit_SetPointSrv::srv_callback2,
   ROSUnit_SetPointSrv::srv_callback3,
@@ -28,7 +28,7 @@ ROSUnit_SetPointSrv::~ROSUnit_SetPointSrv() {
 
 }
 
-bool ROSUnit_SetPointSrv::srv_callback1(hear_ros_bridge::set_point::Request& req, hear_ros_bridge::set_point::Response& res) {
+bool ROSUnit_SetPointSrv::srv_callback1(hear_msgs::set_point::Request& req, hear_msgs::set_point::Response& res) {
     Vector3DMsg t_msg;
     Vector3D<float> t_vec;
     t_vec.x = req.p.x;
@@ -39,7 +39,7 @@ bool ROSUnit_SetPointSrv::srv_callback1(hear_ros_bridge::set_point::Request& req
     return true;
 }
 
-bool ROSUnit_SetPointSrv::srv_callback2(hear_ros_bridge::set_point::Request& req, hear_ros_bridge::set_point::Response& res) {
+bool ROSUnit_SetPointSrv::srv_callback2(hear_msgs::set_point::Request& req, hear_msgs::set_point::Response& res) {
     Vector3DMsg t_msg;
     Vector3D<float> t_vec;
     t_vec.x = req.p.x;
@@ -50,7 +50,7 @@ bool ROSUnit_SetPointSrv::srv_callback2(hear_ros_bridge::set_point::Request& req
     return true;
 }
 
-bool ROSUnit_SetPointSrv::srv_callback3(hear_ros_bridge::set_point::Request& req, hear_ros_bridge::set_point::Response& res) {
+bool ROSUnit_SetPointSrv::srv_callback3(hear_msgs::set_point::Request& req, hear_msgs::set_point::Response& res) {
     Vector3DMsg t_msg;
     Vector3D<float> t_vec;
     t_vec.x = req.p.x;
@@ -61,7 +61,7 @@ bool ROSUnit_SetPointSrv::srv_callback3(hear_ros_bridge::set_point::Request& req
     return true;
 }
 
-bool ROSUnit_SetPointSrv::srv_callback4(hear_ros_bridge::set_point::Request& req, hear_ros_bridge::set_point::Response& res) {
+bool ROSUnit_SetPointSrv::srv_callback4(hear_msgs::set_point::Request& req, hear_msgs::set_point::Response& res) {
     Vector3DMsg t_msg;
     Vector3D<float> t_vec;
     t_vec.x = req.p.x;
@@ -72,7 +72,7 @@ bool ROSUnit_SetPointSrv::srv_callback4(hear_ros_bridge::set_point::Request& req
     return true;
 }
 
-bool ROSUnit_SetPointSrv::srv_callback5(hear_ros_bridge::set_point::Request& req, hear_ros_bridge::set_point::Response& res) {
+bool ROSUnit_SetPointSrv::srv_callback5(hear_msgs::set_point::Request& req, hear_msgs::set_point::Response& res) {
     Vector3DMsg t_msg;
     Vector3D<float> t_vec;
     t_vec.x = req.p.x;

@@ -26,8 +26,8 @@ void ROSUnit_RestNormSettings::receiveMsgData(DataMsg* t_msg){
 
 }
 
-bool ROSUnit_RestNormSettings::callbackSettings(hear_ros_bridge::Restricted_Norm_Settings::Request  &req, 
-                                                hear_ros_bridge::Restricted_Norm_Settings::Response &res){
+bool ROSUnit_RestNormSettings::callbackSettings(hear_msgs::Restricted_Norm_Settings::Request  &req, 
+                                                hear_msgs::Restricted_Norm_Settings::Response &res){
     _settings_msg.enabled = req.enabled;
     _settings_msg.delete_existing_waypoints = req.delete_existing_waypoints;
     _settings_msg.max_norm = req.max_norm;

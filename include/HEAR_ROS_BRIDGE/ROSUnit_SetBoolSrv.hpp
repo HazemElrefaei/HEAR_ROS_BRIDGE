@@ -1,7 +1,7 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/set_bool.h>
+#include <hear_msgs/set_bool.h>
 #include "HEAR_msg/BoolMsg.hpp"
 
 class ROSUnit_SetBoolSrv : public ROSUnit {
@@ -19,10 +19,10 @@ private:
     ros::ServiceServer m_server;
     static int internal_counter;
     static ROSUnit_SetBoolSrv* m_ptr[ROSUnit_capacity];
-    static bool(*callbackFunctionPointer[ROSUnit_capacity])(hear_ros_bridge::set_bool::Request&, hear_ros_bridge::set_bool::Response&);
-    static bool srv_callback1(hear_ros_bridge::set_bool::Request&, hear_ros_bridge::set_bool::Response&);//TODO refactor through templates
-    static bool srv_callback2(hear_ros_bridge::set_bool::Request&, hear_ros_bridge::set_bool::Response&);
-    static bool srv_callback3(hear_ros_bridge::set_bool::Request&, hear_ros_bridge::set_bool::Response&);
-    static bool srv_callback4(hear_ros_bridge::set_bool::Request&, hear_ros_bridge::set_bool::Response&);
-    static bool srv_callback5(hear_ros_bridge::set_bool::Request&, hear_ros_bridge::set_bool::Response&);
+    static bool(*callbackFunctionPointer[ROSUnit_capacity])(hear_msgs::set_bool::Request&, hear_msgs::set_bool::Response&);
+    static bool srv_callback1(hear_msgs::set_bool::Request&, hear_msgs::set_bool::Response&);//TODO refactor through templates
+    static bool srv_callback2(hear_msgs::set_bool::Request&, hear_msgs::set_bool::Response&);
+    static bool srv_callback3(hear_msgs::set_bool::Request&, hear_msgs::set_bool::Response&);
+    static bool srv_callback4(hear_msgs::set_bool::Request&, hear_msgs::set_bool::Response&);
+    static bool srv_callback5(hear_msgs::set_bool::Request&, hear_msgs::set_bool::Response&);
 };

@@ -3,7 +3,7 @@
 ROSUnit_SetPoseSrv* ROSUnit_SetPoseSrv::m_ptr[ROSUnit_capacity];
 int ROSUnit_SetPoseSrv::internal_counter=0;
 
-bool(*ROSUnit_SetPoseSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_ros_bridge::set_pose::Request&, hear_ros_bridge::set_pose::Response&){
+bool(*ROSUnit_SetPoseSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_msgs::set_pose::Request&, hear_msgs::set_pose::Response&){
   ROSUnit_SetPoseSrv::srv_callback1,
   ROSUnit_SetPoseSrv::srv_callback2,
   ROSUnit_SetPoseSrv::srv_callback3,
@@ -28,7 +28,7 @@ ROSUnit_SetPoseSrv::~ROSUnit_SetPoseSrv () {
 
 }
 
-bool ROSUnit_SetPoseSrv::srv_callback1(hear_ros_bridge::set_pose::Request& req, hear_ros_bridge::set_pose::Response& res) {
+bool ROSUnit_SetPoseSrv::srv_callback1(hear_msgs::set_pose::Request& req, hear_msgs::set_pose::Response& res) {
     PoseMsg t_msg;
     t_msg.pose.x = req.pose.point.x;
     t_msg.pose.y = req.pose.point.y;
@@ -38,7 +38,7 @@ bool ROSUnit_SetPoseSrv::srv_callback1(hear_ros_bridge::set_pose::Request& req, 
     return true;
 }
 
-bool ROSUnit_SetPoseSrv::srv_callback2(hear_ros_bridge::set_pose::Request& req, hear_ros_bridge::set_pose::Response& res) {
+bool ROSUnit_SetPoseSrv::srv_callback2(hear_msgs::set_pose::Request& req, hear_msgs::set_pose::Response& res) {
     PoseMsg t_msg;
     t_msg.pose.x = req.pose.point.x;
     t_msg.pose.y = req.pose.point.y;
@@ -48,7 +48,7 @@ bool ROSUnit_SetPoseSrv::srv_callback2(hear_ros_bridge::set_pose::Request& req, 
     return true;
 }
 
-bool ROSUnit_SetPoseSrv::srv_callback3(hear_ros_bridge::set_pose::Request& req, hear_ros_bridge::set_pose::Response& res) {
+bool ROSUnit_SetPoseSrv::srv_callback3(hear_msgs::set_pose::Request& req, hear_msgs::set_pose::Response& res) {
     PoseMsg t_msg;
     t_msg.pose.x = req.pose.point.x;
     t_msg.pose.y = req.pose.point.y;
@@ -58,7 +58,7 @@ bool ROSUnit_SetPoseSrv::srv_callback3(hear_ros_bridge::set_pose::Request& req, 
     return true;
 }
 
-bool ROSUnit_SetPoseSrv::srv_callback4(hear_ros_bridge::set_pose::Request& req, hear_ros_bridge::set_pose::Response& res) {
+bool ROSUnit_SetPoseSrv::srv_callback4(hear_msgs::set_pose::Request& req, hear_msgs::set_pose::Response& res) {
     PoseMsg t_msg;
     t_msg.pose.x = req.pose.point.x;
     t_msg.pose.y = req.pose.point.y;
@@ -68,7 +68,7 @@ bool ROSUnit_SetPoseSrv::srv_callback4(hear_ros_bridge::set_pose::Request& req, 
     return true;
 }
 
-bool ROSUnit_SetPoseSrv::srv_callback5(hear_ros_bridge::set_pose::Request& req, hear_ros_bridge::set_pose::Response& res) {
+bool ROSUnit_SetPoseSrv::srv_callback5(hear_msgs::set_pose::Request& req, hear_msgs::set_pose::Response& res) {
     PoseMsg t_msg;
     t_msg.pose.x = req.pose.point.x;
     t_msg.pose.y = req.pose.point.y;

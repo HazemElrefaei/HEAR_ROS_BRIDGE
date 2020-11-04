@@ -2,7 +2,7 @@
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
 #include "HEAR_msg/Vector3DMsg.hpp"
-#include <hear_ros_bridge/set_point.h>
+#include <hear_msgs/set_point.h>
 
 class ROSUnit_SetPointClnt : public ROSUnit {
     public:

@@ -4,7 +4,7 @@ ROSUnit_SetVectorClnt::ROSUnit_SetVectorClnt(std::string t_name, ros::NodeHandle
 {
     _input_port_0 = new InputPort(ports_id::IP_0, this);
     _ports = {_input_port_0};
-    m_client = t_main_handler.serviceClient<hear_ros_bridge::set_vector>(t_name);
+    m_client = t_main_handler.serviceClient<hear_msgs::set_vector>(t_name);
 }
 
 ROSUnit_SetVectorClnt::~ROSUnit_SetVectorClnt()
@@ -14,7 +14,7 @@ ROSUnit_SetVectorClnt::~ROSUnit_SetVectorClnt()
 
 void ROSUnit_SetVectorClnt::process(DataMsg* t_msg, Port* t_port) {
     if(t_port->getID() == ports_id::IP_0) {
-        hear_ros_bridge::set_vector t_srv;
+        hear_msgs::set_vector t_srv;
         VectorMsg* t_vector = (VectorMsg*) t_msg;
         t_srv.request.p1.x = t_vector->p1.x;
         t_srv.request.p1.y = t_vector->p1.y;

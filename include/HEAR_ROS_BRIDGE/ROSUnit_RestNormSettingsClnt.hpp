@@ -1,7 +1,7 @@
 #pragma once
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
 #include "HEAR_msg/RestrictedNormRefSettingsMsg.hpp"
-#include <hear_ros_bridge/Restricted_Norm_Settings.h>
+#include <hear_msgs/Restricted_Norm_Settings.h>
 class ROSUnit_RestNormSettingsClnt :  public ROSUnit{
     private:
         Port* _input_port_0;

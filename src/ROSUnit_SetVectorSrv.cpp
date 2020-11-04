@@ -4,7 +4,7 @@ ROSUnit_SetVectorSrv* ROSUnit_SetVectorSrv::m_ptr[ROSUnit_capacity];
 int ROSUnit_SetVectorSrv::internal_counter=0;
 
 
-bool(*ROSUnit_SetVectorSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_ros_bridge::set_vector::Request&, hear_ros_bridge::set_vector::Response&){
+bool(*ROSUnit_SetVectorSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_msgs::set_vector::Request&, hear_msgs::set_vector::Response&){
   ROSUnit_SetVectorSrv::srv_callback1,
   ROSUnit_SetVectorSrv::srv_callback2,
   ROSUnit_SetVectorSrv::srv_callback3,
@@ -29,7 +29,7 @@ ROSUnit_SetVectorSrv::~ROSUnit_SetVectorSrv() {
 
 }
 
-bool ROSUnit_SetVectorSrv::srv_callback1(hear_ros_bridge::set_vector::Request& req, hear_ros_bridge::set_vector::Response& res) {
+bool ROSUnit_SetVectorSrv::srv_callback1(hear_msgs::set_vector::Request& req, hear_msgs::set_vector::Response& res) {
     VectorMsg t_msg;
     t_msg.p1.x = req.p1.x;
     t_msg.p1.y = req.p1.y;
@@ -41,7 +41,7 @@ bool ROSUnit_SetVectorSrv::srv_callback1(hear_ros_bridge::set_vector::Request& r
     return true;
 }
 
-bool ROSUnit_SetVectorSrv::srv_callback2(hear_ros_bridge::set_vector::Request& req, hear_ros_bridge::set_vector::Response& res) {
+bool ROSUnit_SetVectorSrv::srv_callback2(hear_msgs::set_vector::Request& req, hear_msgs::set_vector::Response& res) {
     VectorMsg t_msg;
     t_msg.p1.x = req.p1.x;
     t_msg.p1.y = req.p1.y;
@@ -53,7 +53,7 @@ bool ROSUnit_SetVectorSrv::srv_callback2(hear_ros_bridge::set_vector::Request& r
     return true;
 }
 
-bool ROSUnit_SetVectorSrv::srv_callback3(hear_ros_bridge::set_vector::Request& req, hear_ros_bridge::set_vector::Response& res) {
+bool ROSUnit_SetVectorSrv::srv_callback3(hear_msgs::set_vector::Request& req, hear_msgs::set_vector::Response& res) {
     VectorMsg t_msg;
     t_msg.p1.x = req.p1.x;
     t_msg.p1.y = req.p1.y;
@@ -65,7 +65,7 @@ bool ROSUnit_SetVectorSrv::srv_callback3(hear_ros_bridge::set_vector::Request& r
     return true;
 }
 
-bool ROSUnit_SetVectorSrv::srv_callback4(hear_ros_bridge::set_vector::Request& req, hear_ros_bridge::set_vector::Response& res) {
+bool ROSUnit_SetVectorSrv::srv_callback4(hear_msgs::set_vector::Request& req, hear_msgs::set_vector::Response& res) {
     VectorMsg t_msg;
     t_msg.p1.x = req.p1.x;
     t_msg.p1.y = req.p1.y;
@@ -77,7 +77,7 @@ bool ROSUnit_SetVectorSrv::srv_callback4(hear_ros_bridge::set_vector::Request& r
     return true;
 }
 
-bool ROSUnit_SetVectorSrv::srv_callback5(hear_ros_bridge::set_vector::Request& req, hear_ros_bridge::set_vector::Response& res) {
+bool ROSUnit_SetVectorSrv::srv_callback5(hear_msgs::set_vector::Request& req, hear_msgs::set_vector::Response& res) {
     VectorMsg t_msg;
     t_msg.p1.x = req.p1.x;
     t_msg.p1.y = req.p1.y;

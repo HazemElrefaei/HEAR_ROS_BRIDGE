@@ -1,7 +1,7 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/set_vector.h>
+#include <hear_msgs/set_vector.h>
 #include "HEAR_msg/VectorMsg.hpp"
 
 class ROSUnit_SetVectorClnt : public ROSUnit {

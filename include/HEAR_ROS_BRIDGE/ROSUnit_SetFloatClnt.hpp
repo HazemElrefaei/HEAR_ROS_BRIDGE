@@ -1,7 +1,7 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/set_float.h>
+#include <hear_msgs/set_float.h>
 #include "HEAR_msg/FloatMsg.hpp"
 
 class ROSUnit_SetFloatClnt : public ROSUnit {

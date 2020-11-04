@@ -4,7 +4,7 @@
 #include <geometry_msgs/PointStamped.h>
 #include <geometry_msgs/Point.h>
 #include <std_msgs/Float64MultiArray.h>
-#include <hear_ros_bridge/Info.h>
+#include <hear_msgs/Info.h>
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
 #include "HEAR_msg/Vector3DMsg.hpp"
 #include "HEAR_msg/FloatMsg.hpp"

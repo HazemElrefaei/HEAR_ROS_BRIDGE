@@ -2,7 +2,7 @@
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
 #include <geometry_msgs/Point.h>
-#include <hear_ros_bridge/set_points.h>
+#include <hear_msgs/set_points.h>
 #include "HEAR_msg/PointsMsg.hpp"
 
 class ROSUnit_SetPointsClnt : public ROSUnit {

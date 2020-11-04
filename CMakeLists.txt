@@ -5,10 +5,8 @@ add_compile_options(-std=c++11)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
-  # std_msgs
-  # geometry_msgs
-  hear_architecture
   hear_msgs
+  hear_architecture
 )
 
 catkin_package(
@@ -16,7 +14,6 @@ catkin_package(
   LIBRARIES ${PROJECT_NAME}
   CATKIN_DEPENDS
     roscpp
-    # std_msgs
   DEPENDS
     system_lib
 )
@@ -27,8 +24,7 @@ include_directories(
 )
 
 FILE(GLOB SOURCE_FILES *.cpp
-        src/*.cpp
-        )
+        src/*.cpp)
 
 add_executable(${PROJECT_NAME}_node ${SOURCE_FILES})
 target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES})

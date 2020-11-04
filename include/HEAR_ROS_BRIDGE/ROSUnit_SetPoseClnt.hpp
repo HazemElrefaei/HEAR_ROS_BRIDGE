@@ -1,7 +1,7 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/set_pose.h>
+#include <hear_msgs/set_pose.h>
 #include "HEAR_msg/PoseMsg.hpp"
 
 class ROSUnit_SetPoseClnt : public ROSUnit {

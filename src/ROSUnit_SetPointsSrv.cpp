@@ -3,7 +3,7 @@
 ROSUnit_SetPointsSrv* ROSUnit_SetPointsSrv::m_ptr[ROSUnit_capacity];
 int ROSUnit_SetPointsSrv::internal_counter=0;
 
-bool(*ROSUnit_SetPointsSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_ros_bridge::set_points::Request&, hear_ros_bridge::set_points::Response&){
+bool(*ROSUnit_SetPointsSrv::callbackFunctionPointer[ROSUnit_capacity])(hear_msgs::set_points::Request&, hear_msgs::set_points::Response&){
   ROSUnit_SetPointsSrv::srv_callback1,
   ROSUnit_SetPointsSrv::srv_callback2,
   ROSUnit_SetPointsSrv::srv_callback3,
@@ -28,7 +28,7 @@ ROSUnit_SetPointsSrv::~ROSUnit_SetPointsSrv() {
 
 }
 
-bool ROSUnit_SetPointsSrv::srv_callback1(hear_ros_bridge::set_points::Request& req, hear_ros_bridge::set_points::Response& res) {
+bool ROSUnit_SetPointsSrv::srv_callback1(hear_msgs::set_points::Request& req, hear_msgs::set_points::Response& res) {
     PointsMsg t_msg;
     for(int i = 0; i < req.p.size(); i++) {
         Vector3D<float> t_vec;
@@ -41,7 +41,7 @@ bool ROSUnit_SetPointsSrv::srv_callback1(hear_ros_bridge::set_points::Request& r
     return true;
 }
 
-bool ROSUnit_SetPointsSrv::srv_callback2(hear_ros_bridge::set_points::Request& req, hear_ros_bridge::set_points::Response& res) {
+bool ROSUnit_SetPointsSrv::srv_callback2(hear_msgs::set_points::Request& req, hear_msgs::set_points::Response& res) {
     PointsMsg t_msg;
     for(int i = 0; i < req.p.size(); i++) {
         Vector3D<float> t_vec;
@@ -54,7 +54,7 @@ bool ROSUnit_SetPointsSrv::srv_callback2(hear_ros_bridge::set_points::Request& r
     return true;
 }
 
-bool ROSUnit_SetPointsSrv::srv_callback3(hear_ros_bridge::set_points::Request& req, hear_ros_bridge::set_points::Response& res) {
+bool ROSUnit_SetPointsSrv::srv_callback3(hear_msgs::set_points::Request& req, hear_msgs::set_points::Response& res) {
     PointsMsg t_msg;
     for(int i = 0; i < req.p.size(); i++) {
         Vector3D<float> t_vec;
@@ -67,7 +67,7 @@ bool ROSUnit_SetPointsSrv::srv_callback3(hear_ros_bridge::set_points::Request& r
     return true;
 }
 
-bool ROSUnit_SetPointsSrv::srv_callback4(hear_ros_bridge::set_points::Request& req, hear_ros_bridge::set_points::Response& res) {
+bool ROSUnit_SetPointsSrv::srv_callback4(hear_msgs::set_points::Request& req, hear_msgs::set_points::Response& res) {
     PointsMsg t_msg;
     for(int i = 0; i < req.p.size(); i++) {
         Vector3D<float> t_vec;
@@ -80,7 +80,7 @@ bool ROSUnit_SetPointsSrv::srv_callback4(hear_ros_bridge::set_points::Request& r
     return true;
 }
 
-bool ROSUnit_SetPointsSrv::srv_callback5(hear_ros_bridge::set_points::Request& req, hear_ros_bridge::set_points::Response& res) {
+bool ROSUnit_SetPointsSrv::srv_callback5(hear_msgs::set_points::Request& req, hear_msgs::set_points::Response& res) {
     PointsMsg t_msg;
     for(int i = 0; i < req.p.size(); i++) {
         Vector3D<float> t_vec;

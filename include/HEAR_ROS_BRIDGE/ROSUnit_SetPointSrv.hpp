@@ -1,7 +1,7 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include <hear_ros_bridge/set_point.h>
+#include <hear_msgs/set_point.h>
 #include "HEAR_msg/Vector3DMsg.hpp"
 class ROSUnit_SetPointSrv : public ROSUnit {
 public:
@@ -19,10 +19,10 @@ private:
     static int internal_counter;
     static ROSUnit_SetPointSrv* m_ptr[ROSUnit_capacity];
     //Change the srv_callback code to reflect your system
-    static bool(*callbackFunctionPointer[ROSUnit_capacity])(hear_ros_bridge::set_point::Request&, hear_ros_bridge::set_point::Response&);
-    static bool srv_callback1(hear_ros_bridge::set_point::Request&, hear_ros_bridge::set_point::Response&);//TODO refactor through templates
-    static bool srv_callback2(hear_ros_bridge::set_point::Request&, hear_ros_bridge::set_point::Response&);
-    static bool srv_callback3(hear_ros_bridge::set_point::Request&, hear_ros_bridge::set_point::Response&);
-    static bool srv_callback4(hear_ros_bridge::set_point::Request&, hear_ros_bridge::set_point::Response&);
-    static bool srv_callback5(hear_ros_bridge::set_point::Request&, hear_ros_bridge::set_point::Response&);
+    static bool(*callbackFunctionPointer[ROSUnit_capacity])(hear_msgs::set_point::Request&, hear_msgs::set_point::Response&);
+    static bool srv_callback1(hear_msgs::set_point::Request&, hear_msgs::set_point::Response&);//TODO refactor through templates
+    static bool srv_callback2(hear_msgs::set_point::Request&, hear_msgs::set_point::Response&);
+    static bool srv_callback3(hear_msgs::set_point::Request&, hear_msgs::set_point::Response&);
+    static bool srv_callback4(hear_msgs::set_point::Request&, hear_msgs::set_point::Response&);
+    static bool srv_callback5(hear_msgs::set_point::Request&, hear_msgs::set_point::Response&);
 };

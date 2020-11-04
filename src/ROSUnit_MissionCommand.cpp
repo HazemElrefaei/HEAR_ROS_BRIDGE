@@ -12,7 +12,7 @@
 // ROSUnit_MissionCommand::~ROSUnit_MissionCommand() {
 // }
 
-// bool ROSUnit_MissionCommand::callbackFlightCommand(hear_ros_bridge::set_int::Request  &req, hear_ros_bridge::set_int::Response &res){
+// bool ROSUnit_MissionCommand::callbackFlightCommand(hear_msgs::set_int::Request  &req, hear_msgs::set_int::Response &res){
 //     _command_msg.data = req.data;;
 //     _output_port_0->receiveMsgData((DataMsg*) &_command_msg);
 //     return true;
