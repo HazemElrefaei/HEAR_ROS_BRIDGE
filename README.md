@@ -1,1 +1,1 @@
-This repository contains ros interface utilizing the HEAR_Architecture
+This repository contains ros interface utilizing the hear_ros_bridge
