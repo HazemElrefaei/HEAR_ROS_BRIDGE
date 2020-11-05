@@ -7,8 +7,8 @@
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
 #include "HEAR_math/Quaternion.hpp"
 #include "HEAR_msg/Vector3DMsg.hpp"
-#include "HEAR_misc/Timer.hpp"
-#include "HEAR_misc/ButterFilter_2nd.hpp"
+#include "HEAR_core/Timer.hpp"
+#include "HEAR_math/ButterFilter_2nd.hpp"
 
 class ROSUnit_IMU : public ROSUnit {
 private:

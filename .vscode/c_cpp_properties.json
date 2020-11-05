@@ -4,12 +4,9 @@
           "name": "Linux",
           "includePath": [
               "../HEAR_Architecture/**",
-              "../HEAR_ROS_interface/**",
-              "../HEAR_sensor_interface/**",
+              "../HEAR_ROS_BRIDGE/**",
               "../../devel/include/**",
               "/opt/ros/melodic/include/**"
-
-              // "${workspaceFolder}/include/HEAR_msg/**"
           ],
           "compilerPath": "/usr/bin/clang",
           "cStandard": "c11",
