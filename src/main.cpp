@@ -32,7 +32,8 @@
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetPosesSrv.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetVectorClnt.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetVectorSrv.hpp"
-#include "HEAR_ROS_BRIDGE/ROSUnit_UpdateController.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_UpdateControllerSrv.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_UpdateControllerClnt.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_IMU.hpp"
 
 int main(int argc, char **argv)
