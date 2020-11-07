@@ -9,8 +9,12 @@
 #include "HEAR_ROS_BRIDGE/ROSUnit_PointSub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_EmptyClnt.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_EmptySrv.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_SetBoolClnt.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_SetBoolSrv.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetFloatClnt.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetFloatSrv.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_SetInt8Clnt.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_SetInt8Srv.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetIntClnt.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetIntSrv.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetPointClnt.hpp"
@@ -27,7 +31,7 @@
 #include <string>
 
 enum ROSUnit_tx_rx_type {Client,Subscriber,Server,Publisher};
-enum ROSUnit_msg_type {ROSUnit_Empty,ROSUnit_Float,ROSUnit_Int,ROSUnit_Point,ROSUnit_Points,ROSUnit_Pose,ROSUnit_Poses,ROSUnit_Vector,ROSUnit_Point2D};
+enum ROSUnit_msg_type {ROSUnit_Bool,ROSUnit_Empty,ROSUnit_Float,ROSUnit_Int,ROSUnit_Int8,ROSUnit_Point2D,ROSUnit_Point,ROSUnit_Points,ROSUnit_Pose,ROSUnit_Poses,ROSUnit_Vector,};
 class ROSUnit_Factory {
 private:
     ros::NodeHandle nh;

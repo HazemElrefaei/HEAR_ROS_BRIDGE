@@ -136,6 +136,32 @@ ROSUnit* ROSUnit_Factory::CreateROSUnit(ROSUnit_tx_rx_type t_ros_msg_type_rx_tx,
             }
         }
         break;
+        case ROSUnit_msg_type::ROSUnit_Bool:
+        {
+            if (t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Client){
+                new_ros_unit_ptr=new ROSUnit_SetBoolClnt(ROS_path,nh);
+            }
+            else if(t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Server){
+                new_ros_unit_ptr=new ROSUnit_SetBoolSrv(ROS_path,nh);
+            }
+            else{
+                //TODO: add error: doesnt exist
+            }
+        }
+        break;
+        case ROSUnit_msg_type::ROSUnit_Int8:
+        {
+            if (t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Client){
+                new_ros_unit_ptr=new ROSUnit_SetInt8Clnt(ROS_path,nh);
+            }
+            else if(t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Server){
+                new_ros_unit_ptr=new ROSUnit_SetInt8Srv(ROS_path,nh);
+            }
+            else{
+                //TODO: add error: doesnt exist
+            }
+        }
+        break;
     }
     if (new_ros_unit_ptr==nullptr){
         throw "ERROR: new_ros_unit_ptr is null. Terminating...";
