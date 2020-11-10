@@ -1,5 +1,5 @@
 #include "HEAR_ROS_BRIDGE/ROSUnit_UpdateControllerSrv.hpp"
-
+//#include <iostream>
 ROSUnit_UpdateControllerSrv* ROSUnit_UpdateControllerSrv::_instance_ptr = NULL;
 ControllerMsg ROSUnit_UpdateControllerSrv::_update_controller_msg;
 control_system ROSUnit_UpdateControllerSrv::_id;
@@ -34,6 +34,7 @@ bool ROSUnit_UpdateControllerSrv::callbackUpdateControllerPID(hear_msgs::Update_
     pid_data.id = _id;
     _update_controller_msg.pid_param = pid_data;
     _instance_ptr->_output_port_0->receiveMsgData(&_update_controller_msg);
+    //std::cout << "rec pid update:" << (int) req.controller_parameters.id << "\n";
     return true;
 }
 
