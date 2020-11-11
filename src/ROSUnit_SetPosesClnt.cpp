@@ -21,6 +21,7 @@ void ROSUnit_SetPosesClnt::process(DataMsg* t_msg, Port* t_port) {
             t_pose.point.z = t_poses->p.poses.at(i).z;
             t_pose.yaw.data = t_poses->p.poses.at(i).yaw;
             t_srv.request.poses.pose.push_back(t_pose);
+            std::cout << " size, x, y, z, yaw: " << t_poses->p.poses.size() << ", " << t_pose.point.x << ", " << t_pose.point.y << ", " << t_pose.point.z << ", " << t_pose.yaw.data << "\n";
         }
         if(m_client.call(t_srv)) {
             //TODO: add success condition

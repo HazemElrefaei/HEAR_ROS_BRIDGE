@@ -36,6 +36,7 @@ bool ROSUnit_SetPosesSrv::srv_callback1(hear_msgs::set_poses::Request& req, hear
         t_pose.y = req.poses.pose.at(i).point.y;
         t_pose.z = req.poses.pose.at(i).point.z;
         t_pose.yaw = req.poses.pose.at(i).yaw.data;
+        std::cout << " size, x, y, z, yaw: " << req.poses.pose.size() << ", " << t_pose.x << ", " << t_pose.y << ", " << t_pose.z << ", " << t_pose.yaw << "\n";
         t_msg.p.poses.push_back(t_pose);
     }
     _output_port_0->receiveMsgData(&t_msg);
