@@ -1,0 +1,25 @@
+#include "HEAR_ROS_BRIDGE/ROSUnit_SetFloatsClnt.hpp"
+
+ROSUnit_SetFloatsClnt::ROSUnit_SetFloatsClnt(std::string t_name, ros::NodeHandle& t_main_handler) : ROSUnit(t_main_handler) {
+    _input_port_0 = new InputPort(ports_id::IP_0, this);
+    _ports = {_input_port_0};
+    m_client = t_main_handler.serviceClient<hear_msgs::set_floats>(t_name);
+}
+
+ROSUnit_SetFloatsClnt::~ROSUnit_SetFloatsClnt() {
+
+}
+
+void ROSUnit_SetFloatsClnt::process(DataMsg* t_msg, Port* t_port) {
+    if(t_port->getID() == ports_id::IP_0)
+    {
+        hear_msgs::set_floats t_srv;
+        t_srv.request.data = ((FloatArrayMsg*) t_msg)->data;
+        if(m_client.call(t_srv)) {
+            //TODO: add success condition
+        }
+        else {
+            //TODO: add error
+        }
+    }
+}

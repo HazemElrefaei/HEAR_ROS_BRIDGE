@@ -39,6 +39,22 @@ ROSUnit* ROSUnit_Factory::CreateROSUnit(ROSUnit_tx_rx_type t_ros_msg_type_rx_tx,
             }
         }
         break;
+        case ROSUnit_msg_type::ROSUnit_Floats :
+        {
+            if (t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Client){
+                new_ros_unit_ptr=new ROSUnit_SetFloatsClnt(ROS_path,nh);
+            }
+            else if(t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Server){
+                new_ros_unit_ptr=new ROSUnit_SetFloatsSrv(ROS_path,nh);
+            }
+            else if(t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Subscriber){
+                new_ros_unit_ptr=new ROSUnit_FloatsSub(ROS_path,nh);
+            }
+            else if(t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Publisher){
+                new_ros_unit_ptr=new ROSUnit_FloatsPub(ROS_path,nh);
+            }
+        }
+        break;
         case ROSUnit_msg_type::ROSUnit_Int:
         {
             if (t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Client){
@@ -81,6 +97,16 @@ ROSUnit* ROSUnit_Factory::CreateROSUnit(ROSUnit_tx_rx_type t_ros_msg_type_rx_tx,
             }
             else if(t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Publisher){
                 new_ros_unit_ptr=new ROSUnit_PointPub(ROS_path,nh);
+            }
+        }
+        break;
+        case ROSUnit_msg_type::ROSUnit_GeoVec:
+        {
+            if(t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Subscriber){
+                new_ros_unit_ptr=new ROSUnit_GeoVecSub(ROS_path,nh);
+            }
+            else if(t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Publisher){
+                new_ros_unit_ptr=new ROSUnit_GeoVecPub(ROS_path,nh);
             }
         }
         break;

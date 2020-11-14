@@ -3,9 +3,14 @@
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_FloatPub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_FloatSub.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_FloatsPub.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_FloatsSub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_Point2DPub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_Point2DSub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_PointPub.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_PointSub.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_GeoVecPub.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_GeoVecSub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_PointSub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_EmptyClnt.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_EmptySrv.hpp"
@@ -13,6 +18,8 @@
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetBoolSrv.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetFloatClnt.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetFloatSrv.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_SetFloatsClnt.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_SetFloatsSrv.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetInt8Clnt.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetInt8Srv.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetIntClnt.hpp"
@@ -31,7 +38,7 @@
 #include <string>
 
 enum ROSUnit_tx_rx_type {Client,Subscriber,Server,Publisher};
-enum ROSUnit_msg_type {ROSUnit_Bool,ROSUnit_Empty,ROSUnit_Float,ROSUnit_Int,ROSUnit_Int8,ROSUnit_Point2D,ROSUnit_Point,ROSUnit_Points,ROSUnit_Pose,ROSUnit_Poses,ROSUnit_Vector,};
+enum ROSUnit_msg_type {ROSUnit_Bool,ROSUnit_Empty,ROSUnit_Float,ROSUnit_Floats,ROSUnit_Int,ROSUnit_Int8,ROSUnit_Point2D,ROSUnit_Point,ROSUnit_GeoVec,ROSUnit_Points,ROSUnit_Pose,ROSUnit_Poses,ROSUnit_Vector,};
 class ROSUnit_Factory {
 private:
     ros::NodeHandle nh;

@@ -1,17 +1,17 @@
 #pragma once
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
-#include "std_msgs/Float32.h"
-#include "HEAR_msg/FloatMsg.hpp"
+#include "std_msgs/Float32MultiArray.h"
+#include "HEAR_msg/FloatArrayMsg.hpp"
 
-class ROSUnit_FloatPub : public ROSUnit
+class ROSUnit_FloatsPub : public ROSUnit
 {
     public:
 
         enum ports_id {IP_0};
         void process(DataMsg* t_msg, Port* t_port);
-        ROSUnit_FloatPub(std::string, ros::NodeHandle&);
-        ~ROSUnit_FloatPub();
+        ROSUnit_FloatsPub(std::string, ros::NodeHandle&);
+        ~ROSUnit_FloatsPub();
 
     private:
         Port* _input_port_0;
