@@ -15,8 +15,6 @@ catkin_package(
   CATKIN_DEPENDS
     hear_msgs
     roscpp
-  DEPENDS
-    system_lib
 )
 
 include_directories(
