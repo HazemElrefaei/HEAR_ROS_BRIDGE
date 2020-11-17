@@ -6,7 +6,7 @@
 
 class ROSUnit_SetFloatSrv : public ROSUnit {
 public:
-    enum ports_id {OP_0, OP_1, OP_2, OP_3, OP_4};
+    enum ports_id {OP_0, OP_1, OP_2, OP_3, OP_4, OP_5, OP_6, OP_7, OP_8, OP_9};
     void process(DataMsg* t_msg, Port* t_port) {};
     ROSUnit_SetFloatSrv(std::string, ros::NodeHandle&);
     ~ROSUnit_SetFloatSrv();
@@ -16,6 +16,11 @@ private:
     static Port* _output_port_2;
     static Port* _output_port_3;
     static Port* _output_port_4;
+    static Port* _output_port_5;
+    static Port* _output_port_6;
+    static Port* _output_port_7;
+    static Port* _output_port_8;
+    static Port* _output_port_9;
     ros::ServiceServer m_server;
     static int internal_counter;
     static ROSUnit_SetFloatSrv* m_ptr[ROSUnit_capacity];
@@ -25,4 +30,9 @@ private:
     static bool srv_callback3(hear_msgs::set_float::Request&, hear_msgs::set_float::Response&);
     static bool srv_callback4(hear_msgs::set_float::Request&, hear_msgs::set_float::Response&);
     static bool srv_callback5(hear_msgs::set_float::Request&, hear_msgs::set_float::Response&);
+    static bool srv_callback6(hear_msgs::set_float::Request&, hear_msgs::set_float::Response&);
+    static bool srv_callback7(hear_msgs::set_float::Request&, hear_msgs::set_float::Response&);
+    static bool srv_callback8(hear_msgs::set_float::Request&, hear_msgs::set_float::Response&);
+    static bool srv_callback9(hear_msgs::set_float::Request&, hear_msgs::set_float::Response&);
+    static bool srv_callback10(hear_msgs::set_float::Request&, hear_msgs::set_float::Response&);
 };
