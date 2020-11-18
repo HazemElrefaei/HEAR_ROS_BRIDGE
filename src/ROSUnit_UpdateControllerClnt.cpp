@@ -42,7 +42,8 @@ void ROSUnit_UpdateControllerClnt::process(DataMsg* t_msg, Port* t_port) {
         srv.request.controller_parameters.mrft_beta = _update_msg->mrft_param.beta;
         srv.request.controller_parameters.mrft_relay_amp = _update_msg->mrft_param.relay_amp;
         srv.request.controller_parameters.mrft_bias = _update_msg->mrft_param.bias;
-
+        srv.request.controller_parameters.mrft_no_switch_delay = _update_msg->mrft_param.no_switch_delay_in_ms;
+        srv.request.controller_parameters.mrft_conf_samples = _update_msg->mrft_param.num_of_peak_conf_samples;
         bool success = m_client_mrft.call(srv);
         if (success) {
             ROS_INFO("CONTROLLER UPDATED. id: %d", static_cast<int>(srv.request.controller_parameters.id));

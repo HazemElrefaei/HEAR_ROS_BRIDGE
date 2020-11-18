@@ -46,6 +46,8 @@ bool ROSUnit_UpdateControllerSrv::callbackUpdateControllerMRFT(hear_msgs::Update
     mrft_data.beta = req.controller_parameters.mrft_beta;
     mrft_data.relay_amp = req.controller_parameters.mrft_relay_amp;
     mrft_data.bias = req.controller_parameters.mrft_bias;
+    mrft_data.num_of_peak_conf_samples = req.controller_parameters.mrft_conf_samples;
+    mrft_data.no_switch_delay_in_ms = req.controller_parameters.mrft_no_switch_delay;
     mrft_data.id = _id;
     _update_controller_msg.mrft_param = mrft_data;
     _instance_ptr->_output_port_1->receiveMsgData(&_update_controller_msg);
