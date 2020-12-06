@@ -7,6 +7,9 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   hear_architecture
   hear_msgs
+  geometry_msgs
+  tf2_geometry_msgs
+  tf2_ros
 )
 
 catkin_package(
@@ -15,6 +18,9 @@ catkin_package(
   CATKIN_DEPENDS
     hear_msgs
     roscpp
+    geometry_msgs
+    tf2_geometry_msgs
+    tf2_ros
 )
 
 include_directories(

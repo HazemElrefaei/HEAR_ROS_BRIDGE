@@ -3,12 +3,11 @@
       {
           "name": "Linux",
           "includePath": [
-              "../HEAR_Architecture/**",
-              "../HEAR_ROS_BRIDGE/**",
+              "include/**",
               "../../devel/include/**",
               "/opt/ros/melodic/include/**"
           ],
-          "compilerPath": "/usr/bin/clang",
+          "compilerPath": "/usr/bin/gcc",
           "cStandard": "c11",
           "intelliSenseMode": "clang-x64"
       }
