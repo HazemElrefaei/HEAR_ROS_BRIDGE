@@ -1,5 +1,15 @@
 #include "HEAR_ROS_BRIDGE/ROSUnit_IMU.hpp"
 
+
+//Current Xsens orientation with respect to the drone frame
+//               z up
+//                    +----> y-axis 
+//                    |                     
+//                    |   
+//                    v x-axis
+
+// positive roll is anti-clockwise rotation on the y-axis
+
 ROSUnit_IMU* ROSUnit_IMU::_instance_ptr = NULL;
 Timer ROSUnit_IMU::t_pedro;
 ButterFilter_2nd ROSUnit_IMU::filter_gyro_x(ButterFilter_2nd::BF_settings::FS200FC50);
@@ -83,8 +93,8 @@ void ROSUnit_IMU::callbackXsensAttitude( const geometry_msgs::QuaternionStamped&
     _euler.z= atan2(siny_cosp, cosy_cosp);
 
     Vector3D<double> orientation_euler;
-    orientation_euler.x = -1 * _euler.y;
-    orientation_euler.y = _euler.x; //Arranging the frames to match with the drone's
+    orientation_euler.x = _euler.x;
+    orientation_euler.y = _euler.y; //Arranging the frames to match with the drone's
     orientation_euler.z = _euler.z;
 
     FloatMsg roll, pitch;
