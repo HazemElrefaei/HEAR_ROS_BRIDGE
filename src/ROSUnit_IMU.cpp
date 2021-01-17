@@ -48,8 +48,8 @@ void ROSUnit_IMU::callbackXsensBodyRate(const geometry_msgs::Vector3Stamped& msg
 void ROSUnit_IMU::callbackXsensFreeAcceleration(const geometry_msgs::Vector3Stamped& msg_free_acceleration){
     Vector3DMsg pv_dot_dot_msg;
     Vector3D<double> free_acceleration;
-    free_acceleration.x = -1 * msg_free_acceleration.vector.x;
-    free_acceleration.y = -1 * msg_free_acceleration.vector.y;
+    free_acceleration.x = msg_free_acceleration.vector.x;
+    free_acceleration.y = msg_free_acceleration.vector.y;
     free_acceleration.z = msg_free_acceleration.vector.z;
     pv_dot_dot_msg.data = free_acceleration;
 }
