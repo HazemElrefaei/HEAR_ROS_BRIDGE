@@ -31,8 +31,8 @@ ROSUnit_IMU::~ROSUnit_IMU() {
 void ROSUnit_IMU::callbackXsensBodyRate(const geometry_msgs::Vector3Stamped& msg_bodyrate){
     Vector3DMsg pv_dot_msg;
     Vector3D<double> angular_vel;
-    angular_vel.x = -1 * msg_bodyrate.vector.x;
-    angular_vel.y = -1 * msg_bodyrate.vector.y;
+    angular_vel.x = msg_bodyrate.vector.x;
+    angular_vel.y = msg_bodyrate.vector.y;
     angular_vel.z = msg_bodyrate.vector.z;
     pv_dot_msg.data = angular_vel;
     FloatMsg roll_rate, pitch_rate, yaw_rate;
