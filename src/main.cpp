@@ -10,7 +10,6 @@
 #include "HEAR_ROS_BRIDGE/ROSUnit_FloatSub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_InfoSubscriber.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_Optitrack.hpp"
-#include "HEAR_ROS_BRIDGE/ROSUnit_OrientationSubscriber.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_Point2DPub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_Point2DSub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_PointPub.hpp"
