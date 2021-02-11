@@ -20,7 +20,7 @@ class ROSUnit_EmptySrv : public ROSUnit {
     static int internal_counter;
     static ROSUnit_EmptySrv* m_ptr[ROSUnit_capacity];
     static bool(*callbackFunctionPointer[ROSUnit_capacity])(std_srvs::Empty::Request&, std_srvs::Empty::Response&);
-    static bool srv_callback1(std_srvs::Empty::Request&, std_srvs::Empty::Response&);//TODO refactor through templates
+    static bool srv_callback1(std_srvs::Empty::Request&, std_srvs::Empty::Response&);//TODO refactor through templates.
     static bool srv_callback2(std_srvs::Empty::Request&, std_srvs::Empty::Response&);
     static bool srv_callback3(std_srvs::Empty::Request&, std_srvs::Empty::Response&);
     static bool srv_callback4(std_srvs::Empty::Request&, std_srvs::Empty::Response&);
