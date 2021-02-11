@@ -1,13 +1,10 @@
 #pragma once
 #include "ros/ros.h"
-#include <nav_msgs/Odometry.h>
-#include <tf2_ros/transform_listener.h>
 #include <tf2_ros/static_transform_broadcaster.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include <geometry_msgs/Vector3Stamped.h>
-#include <geometry_msgs/PoseStamped.h>
+#include <geometry_msgs/PointStamped.h>
 #include <geometry_msgs/TransformStamped.h>
-#include <tf2/LinearMath/Quaternion.h>
 
 #include "HEAR_ROS_BRIDGE/ROSUnit.hpp"
 #include "HEAR_msg/BoolMsg.hpp"
@@ -19,17 +16,20 @@
 class ROSUnit_SLAM : public ROSUnit {
 private:
     static ROSUnit_SLAM* _instance_ptr; 
-    static tf2_ros::Buffer tf_Buffer;
-    static tf2_ros::TransformListener tfListener;
-    static tf2_ros::StaticTransformBroadcaster static_broadcaster;
-    ros::Subscriber _sub_odometry;
+    ros::Subscriber _sub_pos;
+    ros::Subscriber _sub_vel;
+    ros::Subscriber _sub_ori;
+    ros::Publisher _pub_ref_frame;
+
     static Port* _output_port_0;
     static Port* _output_port_1;
     static Port* _output_port_2;
-    static void callbackOdom(const nav_msgs::Odometry::ConstPtr&);
-    static std::string ref_frame;
+    static void callbackPos(const geometry_msgs::PointStamped::ConstPtr&);
+    static void callbackVel(const geometry_msgs::Vector3Stamped::ConstPtr&);
+    static void callbackOri(const geometry_msgs::PointStamped::ConstPtr&);
+
+    std::string ref_frame = "map";
     void pub_static_transform();
-//    geometry_msgs::TransformStamped static_transformStamped;
     Vector3D<float> _position;
     Vector3D<float> _orientation;
     Port* _input_port_0;
