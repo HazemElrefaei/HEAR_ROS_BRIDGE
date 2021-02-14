@@ -16,6 +16,7 @@ ROSUnit_Optitrack::~ROSUnit_Optitrack() {
 
 void ROSUnit_Optitrack::callbackOptitrack(const geometry_msgs::PoseStamped& msg){
     std::cout << "optitrack callback called\n";
+
     Vector3D<float> pos_data;
     pos_data.x = msg.pose.position.x;
     pos_data.y = msg.pose.position.y;
@@ -25,6 +26,10 @@ void ROSUnit_Optitrack::callbackOptitrack(const geometry_msgs::PoseStamped& msg)
     att_data.y = msg.pose.orientation.y;
     att_data.z = msg.pose.orientation.z;
     att_data.w = msg.pose.orientation.w;
+
+    std::cout << "pos_data.x"<<pos_data.x<<std::endl;
+    std::cout << "pos_data.y"<<pos_data.y<<std::endl;
+    std::cout << "pos_data.z"<<pos_data.z<<std::endl;
 
     ros::Time t_time = msg.header.stamp;
     double t_dt = t_time.toSec();
