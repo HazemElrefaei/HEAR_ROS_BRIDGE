@@ -33,8 +33,8 @@ ROSUnit_IMU::~ROSUnit_IMU() {
 void ROSUnit_IMU::callbackXsensBodyRate(const geometry_msgs::Vector3Stamped& msg_bodyrate){
     Vector3DMsg pv_dot_msg;
     Vector3D<double> angular_vel;
-    angular_vel.x = -1 * msg_bodyrate.vector.x;
-    angular_vel.y = -1 * msg_bodyrate.vector.y;
+    angular_vel.x = 1 * msg_bodyrate.vector.x;
+    angular_vel.y = 1 * msg_bodyrate.vector.y;
     angular_vel.z = msg_bodyrate.vector.z;
     pv_dot_msg.data = angular_vel;
     FloatMsg roll_rate, pitch_rate, yaw_rate;
@@ -50,8 +50,8 @@ void ROSUnit_IMU::callbackXsensBodyRate(const geometry_msgs::Vector3Stamped& msg
 void ROSUnit_IMU::callbackXsensFreeAcceleration(const geometry_msgs::Vector3Stamped& msg_free_acceleration){
     Vector3DMsg pv_dot_dot_msg;
     Vector3D<double> free_acceleration;
-    free_acceleration.x = -1 * msg_free_acceleration.vector.x;
-    free_acceleration.y = -1 * msg_free_acceleration.vector.y;
+    free_acceleration.x = 1 * msg_free_acceleration.vector.x;
+    free_acceleration.y = 1 * msg_free_acceleration.vector.y;
     free_acceleration.z = msg_free_acceleration.vector.z;
     pv_dot_dot_msg.data = free_acceleration;
     _instance_ptr->_output_port_5->receiveMsgData(&pv_dot_dot_msg);
@@ -86,8 +86,8 @@ void ROSUnit_IMU::callbackXsensAttitude( const geometry_msgs::QuaternionStamped&
     _euler.z= atan2(siny_cosp, cosy_cosp);
 
     Vector3D<double> orientation_euler;
-    orientation_euler.x = -1 * _euler.x;
-    orientation_euler.y = -1 * _euler.y;
+    orientation_euler.x = 1 * _euler.x;
+    orientation_euler.y = 1 * _euler.y;
     orientation_euler.z = _euler.z;
 
     FloatMsg roll, pitch;
