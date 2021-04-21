@@ -28,13 +28,12 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-FILE(GLOB SOURCE_FILES *.cpp
+FILE(GLOB SOURCE_FILES
         src/*.cpp)
 
 add_library(${PROJECT_NAME}
 ${SOURCE_FILES}
 )
 
-add_executable(${PROJECT_NAME}_node ${SOURCE_FILES})
-target_link_libraries(${PROJECT_NAME}_node ${catkin_LIBRARIES})
-add_dependencies(${PROJECT_NAME}_node hear_msgs_generate_messages_cpp)
+add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})
+
