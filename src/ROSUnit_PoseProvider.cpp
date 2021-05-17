@@ -25,7 +25,7 @@ ROSUnit_PoseProvider::ROSUnit_PoseProvider(ros::NodeHandle& t_main_handler): ROS
     _output_port_3 = new OutputPort(ports_id::OP_3_BODY_RATE, this);
     _output_port_4 = new OutputPort(ports_id::OP_4_FREE_ACCELERATION, this);
 
-    rot_offset.setRPY(0.0, 0.0, -M_PI/2.0);
+    rot_offset.setRPY(0.0, 0.0, M_PI/2.0);
 
     _ports = {_output_port_0, _output_port_1, _output_port_2, _output_port_3, _output_port_4};
 
