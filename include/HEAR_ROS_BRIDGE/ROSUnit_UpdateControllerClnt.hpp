@@ -14,7 +14,8 @@ private:
     control_system _id;
     ROSUnit_UpdateControllerClnt* _instance_ptr;
     ControllerMsg _update_controller_msg; 
-    ros::ServiceClient m_client_pid;
+    ros::ServiceClient m_client_pid_outer;
+    ros::ServiceClient m_client_pid_inner;
     ros::ServiceClient m_client_mrft;
     ros::ServiceClient m_client_bb;
     Port* _input_port_0;

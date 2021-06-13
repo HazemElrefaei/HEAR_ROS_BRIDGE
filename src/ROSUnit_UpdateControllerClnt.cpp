@@ -2,7 +2,8 @@
 
 
 ROSUnit_UpdateControllerClnt::ROSUnit_UpdateControllerClnt(ros::NodeHandle& t_main_handler) : ROSUnit(t_main_handler) {
-    m_client_pid = t_main_handler.serviceClient<hear_msgs::Update_Controller_PID>("update_controller/pid");
+    m_client_pid_outer = t_main_handler.serviceClient<hear_msgs::Update_Controller_PID>("update_controller/pid/outer");
+    m_client_pid_inner = t_main_handler.serviceClient<hear_msgs::Update_Controller_PID>("update_controller/pid/inner");
     m_client_mrft = t_main_handler.serviceClient<hear_msgs::Update_Controller_MRFT>("update_controller/mrft");
     m_client_bb = t_main_handler.serviceClient<hear_msgs::Update_Controller_BB>("update_controller/bb");
     _instance_ptr = this;
@@ -28,7 +29,12 @@ void ROSUnit_UpdateControllerClnt::process(DataMsg* t_msg, Port* t_port) {
         srv.request.controller_parameters.pid_anti_windup = _update_msg->pid_param.anti_windup;
         srv.request.controller_parameters.pid_en_pv_derivation = _update_msg->pid_param.en_pv_derivation;
         srv.request.controller_parameters.pid_dt = _update_msg->pid_param.dt;
-        bool success = m_client_pid.call(srv);
+        bool success;
+        if( (int)_update_msg->pid_param.id < 3){
+            success = m_client_pid_outer.call(srv);
+        }else{
+            success = m_client_pid_inner.call(srv);
+        }
         if (success) {
             ROS_INFO("CONTROLLER UPDATED. id: %d", static_cast<int>(srv.request.controller_parameters.id));
         }
