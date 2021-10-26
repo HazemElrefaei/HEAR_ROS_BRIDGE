@@ -52,7 +52,7 @@ void ROSUnit_UpdateControllerClnt::process(DataMsg* t_msg, Port* t_port) {
         srv.request.controller_parameters.mrft_no_switch_delay = _update_msg->mrft_param.no_switch_delay_in_ms;
         srv.request.controller_parameters.mrft_conf_samples = _update_msg->mrft_param.num_of_peak_conf_samples;
         bool success = false;
-        if( (int)_update_msg->pid_param.id <= (int)block_id::MRFT_Z){
+        if( (int)_update_msg->mrft_param.id <= (int)block_id::MRFT_Z){
             success = m_client_mrft_outer.call(srv);
         }else{
             success = m_client_mrft_inner.call(srv);
