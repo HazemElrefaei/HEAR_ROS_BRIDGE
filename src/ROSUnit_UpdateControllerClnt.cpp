@@ -4,7 +4,8 @@
 ROSUnit_UpdateControllerClnt::ROSUnit_UpdateControllerClnt(ros::NodeHandle& t_main_handler) : ROSUnit(t_main_handler) {
     m_client_pid_outer = t_main_handler.serviceClient<hear_msgs::Update_Controller_PID>("update_controller/pid/outer");
     m_client_pid_inner = t_main_handler.serviceClient<hear_msgs::Update_Controller_PID>("update_controller/pid/inner");
-    m_client_mrft = t_main_handler.serviceClient<hear_msgs::Update_Controller_MRFT>("update_controller/mrft");
+    m_client_mrft_outer = t_main_handler.serviceClient<hear_msgs::Update_Controller_MRFT>("update_controller/mrft/outer");
+    m_client_mrft_inner = t_main_handler.serviceClient<hear_msgs::Update_Controller_MRFT>("update_controller/mrft/inner");    
     m_client_bb = t_main_handler.serviceClient<hear_msgs::Update_Controller_BB>("update_controller/bb");
     _instance_ptr = this;
     _input_port_0 = new InputPort(ports_id::IP_0_PID, this);
@@ -29,8 +30,8 @@ void ROSUnit_UpdateControllerClnt::process(DataMsg* t_msg, Port* t_port) {
         srv.request.controller_parameters.pid_anti_windup = _update_msg->pid_param.anti_windup;
         srv.request.controller_parameters.pid_en_pv_derivation = _update_msg->pid_param.en_pv_derivation;
         srv.request.controller_parameters.pid_dt = _update_msg->pid_param.dt;
-        bool success;
-        if( (int)_update_msg->pid_param.id < 3){
+        bool success = false;
+        if( (int)_update_msg->pid_param.id <= (int)block_id::PID_Z){
             success = m_client_pid_outer.call(srv);
         }else{
             success = m_client_pid_inner.call(srv);
@@ -50,7 +51,12 @@ void ROSUnit_UpdateControllerClnt::process(DataMsg* t_msg, Port* t_port) {
         srv.request.controller_parameters.mrft_bias = _update_msg->mrft_param.bias;
         srv.request.controller_parameters.mrft_no_switch_delay = _update_msg->mrft_param.no_switch_delay_in_ms;
         srv.request.controller_parameters.mrft_conf_samples = _update_msg->mrft_param.num_of_peak_conf_samples;
-        bool success = m_client_mrft.call(srv);
+        bool success = false;
+        if( (int)_update_msg->pid_param.id <= (int)block_id::MRFT_Z){
+            success = m_client_mrft_outer.call(srv);
+        }else{
+            success = m_client_mrft_inner.call(srv);
+        }
         if (success) {
             ROS_INFO("CONTROLLER UPDATED. id: %d", static_cast<int>(srv.request.controller_parameters.id));
         }
