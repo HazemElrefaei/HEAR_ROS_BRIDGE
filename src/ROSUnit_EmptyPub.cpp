@@ -13,9 +13,10 @@ ROSUnit_EmptyPub::~ROSUnit_EmptyPub() {
 
 void ROSUnit_EmptyPub::process(DataMsg* t_msg, Port* t_port) {
     if(t_port->getID() == ports_id::IP_0)
-    {
+    {   
+        std_msgs::Empty myMsg;
         rate = ((DoubleMsg*) t_msg)->data;
         ros::Rate loop_rate(rate);
-        m_pub.publish("{}");
+        m_pub.publish(myMsg);
     }
 }
