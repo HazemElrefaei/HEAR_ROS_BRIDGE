@@ -18,6 +18,9 @@ ROSUnit* ROSUnit_Factory::CreateROSUnit(ROSUnit_tx_rx_type t_ros_msg_type_rx_tx,
             else if(t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Server){
                 new_ros_unit_ptr=new ROSUnit_EmptySrv(ROS_path,nh);
             }
+            else if(t_ros_msg_type_rx_tx==ROSUnit_tx_rx_type::Publisher){
+                new_ros_unit_ptr=new ROSUnit_EmptyPub(ROS_path,nh);
+            }
             else{
                 //TODO: add error: doesnt exist
             }

@@ -14,6 +14,7 @@
 #include "HEAR_ROS_BRIDGE/ROSUnit_PointSub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_EmptyClnt.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_EmptySrv.hpp"
+#include "HEAR_ROS_BRIDGE/ROSUnit_EmptyPub.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetBoolClnt.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetBoolSrv.hpp"
 #include "HEAR_ROS_BRIDGE/ROSUnit_SetFloatClnt.hpp"
